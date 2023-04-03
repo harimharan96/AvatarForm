@@ -1,0 +1,71 @@
+#logo {
+    position: absolute;
+    width: 44%;
+    height: 34%;
+    left: 27.86%;
+    right: 27.86%;
+    top: 32.96%;
+    bottom: 32.96%;
+    border: 3px solid transparent;
+    background: linear-gradient(#000000, #000000) padding-box,
+        linear-gradient(180deg, #7B72CC 0%, #DC0078 33.33%, #3871D6 100%) border-box;
+    box-sizing: border-box;
+    border-radius: 52.5px;
+    transform: scale(0);
+    /* animation */
+    animation-name: my-animation;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-out;
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55.58%;
+    height: auto;
+}
+
+@media screen and (max-width: 400px) {
+    #logo {
+        width: 255px;
+        height: 110.5px;
+        border-radius: 15.75px;
+        position: absolute;
+        left: 14.72%;
+        right: 14.44%;
+        top: 43.12%;
+        bottom: 43.08%;
+    }
+
+}
+
+@media screen and (max-width: 1133px) {
+    #logo {
+        height: 220.80078125px;
+        width: 510px;
+        border-radius: 31.500059127807617px;
+
+    }
+
+}
+
+@keyframes my-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

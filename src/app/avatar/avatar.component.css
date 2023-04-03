@@ -1,0 +1,160 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+img+[type=radio].ng-untouched {
+    filter: saturate(1);
+}
+
+[type=radio]:checked+img {
+    transform: scale(1.1);
+}
+
+[type=radio]:not(:checked)+img {
+    filter: saturate(20%);
+}
+
+img {
+    margin: 20px;
+}
+
+.btn {
+    font-size: 30px;
+    color: white;
+    border-width: 0px;
+    border-style: solid;
+    margin-top: 30px;
+    padding: 1.5px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
+        linear-gradient(180deg, #7B72CC 0%, #DC0078 49.48%, #3871D6 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    height: 82.5px;
+    width: 232.5px;
+    cursor: pointer;
+    border-radius: 65.21484375px;
+
+}
+
+.btn:disabled {
+    background: #3A3A3A;
+    border: 1.65625px solid #B0B0B0;
+    color: #9E9E9E;
+    cursor: not-allowed;
+}
+
+#name {
+    color: white;
+    height: 78px;
+    width: 1519px;
+
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 72px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.avatars {
+    margin: 20px;
+}
+
+#avatarTitle {
+    color: white;
+    margin-bottom: 30px;
+
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0.01em;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 400px) {
+    /* .container {
+        flex-wrap: wrap;
+    } */
+
+    .avatars {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+    }
+
+    img {
+        height: 96px;
+        width: 96px;
+        margin: 19px;
+    }
+
+    #name {
+        height: 39px;
+        width: 300px;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: 0.01em;
+        margin: 0;
+    }
+
+    #avatarTitle {
+        height: 39px;
+        width: 300px;
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .btn {
+        height: 35px;
+        width: 88px;
+        font-size: 16px;
+        padding: 1px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    #name {
+        font-size: 45px;
+        margin: 0;
+    }
+
+    #avatarTitle {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    img {
+        width: 144px;
+        height: 144px;
+
+    }
+
+    .btn {
+        height: 61.875px;
+        width: 174.375px;
+        font-size: 25px;
+        line-height: 29px;
+        border-radius: 48.9111328125px;
+
+    }
+}

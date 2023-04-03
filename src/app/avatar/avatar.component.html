@@ -1,0 +1,32 @@
+<div *ngIf="avatarComponent" class="container">
+    <p id="name">Hello {{name}}!</p>
+    <p id="avatarTitle">Choose your avatar</p>
+    <div class="avatars">
+        <label>
+            <input type="radio" name="avatar" id="1" value="1" [(ngModel)]="avatar">
+            <img src="../../files/Avatar 1 (large states.png" alt="">
+        </label>
+        <label>
+            <input type="radio" name="avatar" id="2" value="2" [(ngModel)]="avatar">
+            <img src="../../files/Avatar 2 (large states.png" alt="">
+
+        </label>
+        <label>
+            <input type="radio" name="avatar" id="3" value="3" [(ngModel)]="avatar">
+            <img src="../../files/Avatar 3 (large states.png" alt="">
+
+        </label>
+        <label>
+            <input type="radio" name="avatar" id="4" value="4" [(ngModel)]="avatar">
+            <img src="../../files/Avatar 6.png" alt="">
+
+        </label>
+        <label>
+            <input type="radio" name="avatar" id="5" value="5" [(ngModel)]="avatar">
+            <img src="../../files/Avatar 7.png" alt="">
+        </label>
+
+    </div>
+    <button routerLinkActive="active" routerLink="/room" (click)="toRoom()" class="btn"
+        [disabled]="!avatar">Next</button>
+</div>

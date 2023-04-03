@@ -1,0 +1,6 @@
+<div *ngIf="nameComponent" class="container">
+    <p>What is your name?</p>
+    <input class="txt" type="text" name="name" placeholder="-Type here-" [(ngModel)]="name" autocomplete="off">
+    <button routerLinkActive="active" routerLink="/avatar" (click)="toAvatar()" [disabled]="!name"
+        class="btn">Next</button>
+</div>

@@ -1,0 +1,9 @@
+<div *ngIf="roomComponent" class="container">
+    <div class="info">
+        <img src={{avatar}} alt="">
+        <p class="name">{{name}}</p>
+    </div>
+    <!-- <button class="btn">Join a room</button> -->
+    <button routerLinkActive="active" routerLink="/create-room" (click)="toCreateRoom()" class="btn">Create a
+        room</button>
+</div>
